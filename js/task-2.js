@@ -8,7 +8,13 @@ function calcAverageCalories(days) {
         totalCalories += day.calories;
     }
     const avarage = totalCalories / days.length;
-    return avarage;
+    if (totalCalories === 0) {
+        return 0;
+    }
+    else {
+        return avarage;
+    }
+    
 }
 console.log(
   calcAverageCalories([
